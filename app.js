@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 
+const userRoutes = require('./routes/userRoutes');
+
 require('dotenv/config');
 
 const app = express();
@@ -26,6 +28,8 @@ app.use(express.static(`${__dirname}/public`));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+app.use('/users/userRoutes', userRoutes);
 
 
 
