@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
         required:[true, 'Please enter a password at least 8 characters long. Do not use repeating patterns'],
         minlength:6,
         select:false
-    },
+    }/** ,
     passwordConfirm:{
         type:String,
         required:[true,'Please confirm your password'],
@@ -31,7 +31,7 @@ const userSchema = new mongoose.Schema({
             },
             message: 'Passwords are not the same'
         }
-    }
+    }*/
 
 });
 

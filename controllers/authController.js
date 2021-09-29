@@ -1,7 +1,7 @@
-const User = require('./../models/userModel');
+const User = require('./../models/userModels');
 const {promisify} = require('util');
 const jwt = require('jsonwebtoken');
-const AppError = require('./../util/appError');
+
 
 const signToken = id => {
     return jwt.sign({id}, process.env.JWT_SECRET, {
